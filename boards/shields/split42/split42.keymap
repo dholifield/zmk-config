@@ -1,5 +1,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/output.h>
 
 / {
     keymap {
@@ -7,30 +8,11 @@
 
         base {
             bindings = <
-		    &kp tab  &kp q   &kp w   &kp e     &kp r     &kp t //      &kp y    &kp u    &kp i     &kp o   &kp p    &mo 1
-		    &kp esc  &kp a   &kp s   &kp d     &kp f     &kp g //      &kp h    &kp j    &kp k     &kp l   &kp semi &mo 2
-		    &kp lalt &kp z   &kp x   &kp c     &kp v     &kp b //      &kp n    &kp m    &kp comma &kp dot &kp fslh &kp ret
-					  // &kp lshft &kp lctrl &kp lgui //   &kp spce &kp bspc &kp del
-					  &kp N1 &kp N2 &kp N3 //   &kp spce &kp bspc &kp del
+		    &kp tab     &kp q       &kp w       &kp e       &kp r       &kp t
+		    &kp esc     &kp a       &kp s       &kp d       &kp f       &kp g
+		    &kp lalt    &kp z       &kp x       &kp c       &kp v       &kp b
+		                                        &kp N1      &kp N2      &kp N3
             >;
         };
-	/*
-        layer_one {
-            bindings = <
-		    &kp tab  &kp q   &kp w   &kp e     &kp r     &kp t       &kp y    &kp u    &kp i     &kp o   &kp p    &mo 1
-		    &kp esc  &kp a   &kp s   &kp d     &kp f     &kp g       &kp h    &kp j    &kp k     &kp l   &kp semi &mo 2
-		    &kp lalt &kp z   &kp x   &kp c     &kp v     &kp b       &kp n    &kp m    &kp comma &kp dot &kp fslh &kp ret
-                                     &kp lshft &kp lctrl &kp lgui    &kp spce &kp bspc &kp del
-            >;
-        }
-        layer_two {
-            bindings = <
-		    &kp tab  &kp q   &kp w   &kp e     &kp r     &kp t       &kp y    &kp u    &kp i     &kp o   &kp p    &mo 1
-		    &kp esc  &kp a   &kp s   &kp d     &kp f     &kp g       &kp h    &kp j    &kp k     &kp l   &kp semi &mo 2
-		    &kp lalt &kp z   &kp x   &kp c     &kp v     &kp b       &kp n    &kp m    &kp comma &kp dot &kp fslh &kp ret
-                                     &kp lshft &kp lctrl &kp lgui    &kp spce &kp bspc &kp del
-            >;
-        }
-	*/
     };
 };
