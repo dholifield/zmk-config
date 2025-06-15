@@ -27,7 +27,7 @@
        	status = "okay";
        	gpio-controller;
        	reg = <0x21>;
-       	#gpio-cells = <5>;
+       	#gpio-cells = <2>;
        	ngpios = <40>;
    	};
    	right: pca95xx@20 {
@@ -35,7 +35,7 @@
        	status = "okay";
        	gpio-controller;
        	reg = <0x20>;
-       	#gpio-cells = <5>;
+       	#gpio-cells = <2>;
        	ngpios = <40>;
    	};
 };
