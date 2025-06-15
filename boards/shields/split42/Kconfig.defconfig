@@ -1,0 +1,12 @@
+if SHIELD_SPLIT42
+
+config ZMK_KEYBOARD_NAME
+	default "Split 42"
+
+config ZMK_BLE
+	def_bool n
+
+config SETTINGS
+	def_bool n
+
+endif
