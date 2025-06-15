@@ -44,7 +44,7 @@
        	compatible = "nxp,pca95xx";
        	status = "okay";
        	gpio-controller;
-       	reg = <0b0100100>;
+       	reg = <0x21>;
        	#gpio-cells = <5>;
        	ngpios = <40>;
    	};
@@ -52,7 +52,7 @@
        	compatible = "nxp,pca95xx";
        	status = "okay";
        	gpio-controller;
-       	reg = <0b0100000>;
+       	reg = <0x20>;
        	#gpio-cells = <5>;
        	ngpios = <40>;
    	};
