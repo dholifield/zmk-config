@@ -11,27 +11,9 @@
         debounce-press-ms = <10>;
         debounce-release-ms = <10>;
         input-gpios
-            = <&left 3  GPIO_ACTIVE_LOW>
-            , <&left 39 GPIO_ACTIVE_LOW>
-            , <&left 36 GPIO_ACTIVE_LOW>
-            , <&left 35 GPIO_ACTIVE_LOW>
-            , <&left 32 GPIO_ACTIVE_LOW>
-            , <&left 30 GPIO_ACTIVE_LOW>
-            , <&left 2  GPIO_ACTIVE_LOW>
-            , <&left 4  GPIO_ACTIVE_LOW>
-            , <&left 37 GPIO_ACTIVE_LOW>
-            , <&left 34 GPIO_ACTIVE_LOW>
-            , <&left 31 GPIO_ACTIVE_LOW>
-            , <&left 29 GPIO_ACTIVE_LOW>
-            , <&left 1  GPIO_ACTIVE_LOW>
-            , <&left 0  GPIO_ACTIVE_LOW>
-            , <&left 38 GPIO_ACTIVE_LOW>
-            , <&left 33 GPIO_ACTIVE_LOW>
-            , <&left 27 GPIO_ACTIVE_LOW>
-            , <&left 28 GPIO_ACTIVE_LOW>
-            , <&left 5  GPIO_ACTIVE_LOW>
-            , <&left 6  GPIO_ACTIVE_LOW>
-            , <&left 7  GPIO_ACTIVE_LOW>
+            = <&left 5 GPIO_ACTIVE_LOW>
+            , <&left 6 GPIO_ACTIVE_LOW>
+            , <&left 7 GPIO_ACTIVE_LOW>
             ;
     };
 };

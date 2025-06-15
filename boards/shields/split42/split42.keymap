@@ -6,12 +6,7 @@
         compatible = "zmk,keymap";
 
         base {
-            bindings = <
-		    &kp tab     &kp q       &kp w       &kp e       &kp r       &kp t
-		    &kp esc     &kp a       &kp s       &kp d       &kp f       &kp g
-		    &kp lalt    &kp z       &kp x       &kp c       &kp v       &kp b
-		                                        &kp N1      &kp N2      &kp N3
-            >;
+            bindings = <&kp N1  &kp N2  &kp N3>;
         };
     };
 };
