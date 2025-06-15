@@ -14,6 +14,9 @@
             = <&left 5 GPIO_ACTIVE_LOW>
             , <&left 6 GPIO_ACTIVE_LOW>
             , <&left 7 GPIO_ACTIVE_LOW>
+            , <&right 5 GPIO_ACTIVE_LOW>
+            , <&right 6 GPIO_ACTIVE_LOW>
+            , <&right 7 GPIO_ACTIVE_LOW>
             ;
     };
 };
@@ -22,20 +25,20 @@
   	status = "okay";
    	clock-frequency = <I2C_BITRATE_FAST>;
    
-   	left: pca95xx@21 {
-       	compatible = "nxp,pca95xx";
-       	status = "okay";
-       	gpio-controller;
-       	reg = <0x21>;
-       	#gpio-cells = <2>;
-       	ngpios = <40>;
+	left: pca95xx@21 {
+		compatible = "nxp,pca95xx";
+	       	status = "okay";
+       		gpio-controller;
+	       	reg = <0x21>;
+	       	#gpio-cells = <2>;
+	       	ngpios = <40>;
    	};
    	right: pca95xx@20 {
-       	compatible = "nxp,pca95xx";
-       	status = "okay";
-       	gpio-controller;
-       	reg = <0x20>;
-       	#gpio-cells = <2>;
-       	ngpios = <40>;
+	       	compatible = "nxp,pca95xx";
+       		status = "okay";
+	       	gpio-controller;
+       		reg = <0x20>;
+	       	#gpio-cells = <2>;
+       		ngpios = <40>;
    	};
 };
