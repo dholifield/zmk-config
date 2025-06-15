@@ -1,47 +1,36 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
-#define PIN_MACRO(name, pin) \
-/ { \
-    macros { \
-        name: name { \
-            compatible = "zmk,behavior-macro"; \
-            wait-ms = <5>; \
-            tap-ms = <5>; \
-            #binding-cells = <0>; \
-            bindings = <&kp P &kp I &kp N &kp SPACE>, pin, <&kp ENTER>; \
-        }; \
-    }; \
-};
-
-PIN_MACRO(pin0, <&kp N0>)
-PIN_MACRO(pin1, <&kp N1>)
-PIN_MACRO(pin2, <&kp N2>)
-PIN_MACRO(pin3, <&kp N3>)
-PIN_MACRO(pin4, <&kp N4>)
-PIN_MACRO(pin5, <&kp N5>)
-PIN_MACRO(pin6, <&kp N6>)
-PIN_MACRO(pin7, <&kp N7>)
-PIN_MACRO(pin8, <&kp N8>)
-PIN_MACRO(pin9, <&kp N9>)
-PIN_MACRO(pin10, <&kp N1 &kp N0>)
-
 / {
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
-            bindings = <&pin0
-                        &pin1
-                        &pin2
-                        &pin3
-                        &pin4
-                        &pin5
-                        &pin6
-                        &pin7
-                        &pin8
-                        &pin9
-                        &pin10>;
+        base {
+            bindings = <
+		    &kp tab  &kp q   &kp w   &kp e     &kp r     &kp t //      &kp y    &kp u    &kp i     &kp o   &kp p    &mo 1
+		    &kp esc  &kp a   &kp s   &kp d     &kp f     &kp g //      &kp h    &kp j    &kp k     &kp l   &kp semi &mo 2
+		    &kp lalt &kp z   &kp x   &kp c     &kp v     &kp b //      &kp n    &kp m    &kp comma &kp dot &kp fslh &kp ret
+					  // &kp lshft &kp lctrl &kp lgui //   &kp spce &kp bspc &kp del
+					  &kp N1 &kp N2 &kp N3 //   &kp spce &kp bspc &kp del
+            >;
         };
+	/*
+        layer_one {
+            bindings = <
+		    &kp tab  &kp q   &kp w   &kp e     &kp r     &kp t       &kp y    &kp u    &kp i     &kp o   &kp p    &mo 1
+		    &kp esc  &kp a   &kp s   &kp d     &kp f     &kp g       &kp h    &kp j    &kp k     &kp l   &kp semi &mo 2
+		    &kp lalt &kp z   &kp x   &kp c     &kp v     &kp b       &kp n    &kp m    &kp comma &kp dot &kp fslh &kp ret
+                                     &kp lshft &kp lctrl &kp lgui    &kp spce &kp bspc &kp del
+            >;
+        }
+        layer_two {
+            bindings = <
+		    &kp tab  &kp q   &kp w   &kp e     &kp r     &kp t       &kp y    &kp u    &kp i     &kp o   &kp p    &mo 1
+		    &kp esc  &kp a   &kp s   &kp d     &kp f     &kp g       &kp h    &kp j    &kp k     &kp l   &kp semi &mo 2
+		    &kp lalt &kp z   &kp x   &kp c     &kp v     &kp b       &kp n    &kp m    &kp comma &kp dot &kp fslh &kp ret
+                                     &kp lshft &kp lctrl &kp lgui    &kp spce &kp bspc &kp del
+            >;
+        }
+	*/
     };
 };

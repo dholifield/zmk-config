@@ -6,7 +6,10 @@ config ZMK_KEYBOARD_NAME
 config ZMK_BLE
 	def_bool n
 
-config SETTINGS
-	def_bool n
+config I2C
+	default y
+
+config GPIO_PCA95XX
+	default y
 
 endif
