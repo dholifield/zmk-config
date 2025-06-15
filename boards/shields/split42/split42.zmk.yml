@@ -3,6 +3,7 @@ id: split42
 name: Split42
 type: shield
 url: https://github.com/dholifield/zmk-config
-requires: [seeed_xiao]
+requires:
+  - seeeduino_xiao_rp2040
 features:
   - keys
