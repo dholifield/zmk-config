@@ -33,7 +33,7 @@
 		has-pud;
 		#gpio-cells = <2>;
 		ngpios = <40>;
-		interrupt-parent = <&xiao_d>;
+		interrupt-parent = <&gpio0>;
 		interrupts = <3 2>;
    	};
    	right: pca95xx@20 {
@@ -44,7 +44,7 @@
 		has-pud;
 		#gpio-cells = <2>;
 		ngpios = <40>;
-		interrupt-parent = <&xiao_d>;
+		interrupt-parent = <&gpio0>;
 		interrupts = <3 2>;
    	};
 };
