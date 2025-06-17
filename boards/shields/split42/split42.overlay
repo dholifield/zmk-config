@@ -7,14 +7,16 @@
 
     kscan0: kscan {
         compatible = "zmk,kscan-gpio-direct";
-
+		wakeup-source;
+		debounce-press-ms = <10>;
+		debounce-release-ms = <10>;
         input-gpios
-            = <&left 5 GPIO_ACTIVE_LOW>
-            , <&left 6 GPIO_ACTIVE_LOW>
-            , <&left 7 GPIO_ACTIVE_LOW>
-            , <&right 5 GPIO_ACTIVE_LOW>
-            , <&right 6 GPIO_ACTIVE_LOW>
-            , <&right 7 GPIO_ACTIVE_LOW>
+            = <&left 5 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            , <&left 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            , <&left 7 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            , <&right 5 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            , <&right 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            , <&right 7 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
             ;
     };
 };
@@ -25,18 +27,22 @@
    
 	left: pca95xx@21 {
 		compatible = "nxp,pca95xx";
-	       	status = "okay";
-       		gpio-controller;
-	       	reg = <0x21>;
-	       	#gpio-cells = <2>;
-	       	ngpios = <40>;
+		status = "okay";
+		reg = <0x21>;
+		gpio-controller;
+		#gpio-cells = <2>;
+		ngpios = <40>;
+		interrupt-parent = <&xiao_d>;
+		interrupts = <3 IRQ_TYPE_EDGE_TO_ACTIVE>;
    	};
    	right: pca95xx@20 {
-	       	compatible = "nxp,pca95xx";
-       		status = "okay";
-	       	gpio-controller;
-       		reg = <0x20>;
-	       	#gpio-cells = <2>;
-       		ngpios = <40>;
+		compatible = "nxp,pca95xx";
+		status = "okay";
+		reg = <0x20>;
+		gpio-controller;
+		#gpio-cells = <2>;
+		ngpios = <40>;
+		interrupt-parent = <&xiao_d>;
+		interrupts = <3 IRQ_TYPE_EDGE_TO_ACTIVE>;
    	};
 };
