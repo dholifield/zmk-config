@@ -35,7 +35,7 @@
 		has-interrupt-mask-reg;
 		#gpio-cells = <2>;
 		ngpios = <40>;
-		gpio-reserved-ranges = <8 19>
+		gpio-reserved-ranges = <8 19>;
 		interrupt-gpios = <&xiao_d 3 2>;
    	};
    	right: pca95xx@20 {
@@ -47,7 +47,7 @@
 		has-interrupt-mask-reg;
 		#gpio-cells = <2>;
 		ngpios = <40>;
-		gpio-reserved-ranges = <8 19>
+		gpio-reserved-ranges = <8 19>;
 		interrupt-gpios = <&xiao_d 3 2>;
    	};
 };
