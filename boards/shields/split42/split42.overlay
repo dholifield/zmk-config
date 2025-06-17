@@ -8,7 +8,7 @@
     kscan0: kscan {
         compatible = "zmk,kscan-gpio-direct";
 	// wakeup-source;
-	poll-interval-ms   = <20>;
+	poll-period-ms   = <20>;
 	debounce-press-ms = <10>;
 	debounce-release-ms = <10>;
 
