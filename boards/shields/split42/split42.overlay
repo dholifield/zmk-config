@@ -33,7 +33,8 @@
 		has-pud;
 		#gpio-cells = <2>;
 		ngpios = <40>;
-		interrupt-gpios = <&xiao_d 3>;
+		interrupt-parent = <&xiao_d>;
+		interrupts = <3>
    	};
    	right: pca95xx@20 {
 		compatible = "nxp,pca95xx";
@@ -43,6 +44,7 @@
 		has-pud;
 		#gpio-cells = <2>;
 		ngpios = <40>;
-		interrupt-gpios = <&xiao_d 3>;
+		interrupt-parent = <&xiao_d>;
+		interrupts = <3>
    	};
 };
