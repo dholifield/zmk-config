@@ -34,7 +34,7 @@
 		#gpio-cells = <2>;
 		ngpios = <40>;
 		interrupt-parent = <&xiao_d>;
-		interrupts = <3>
+		interrupts = <3 2>;
    	};
    	right: pca95xx@20 {
 		compatible = "nxp,pca95xx";
@@ -45,6 +45,6 @@
 		#gpio-cells = <2>;
 		ngpios = <40>;
 		interrupt-parent = <&xiao_d>;
-		interrupts = <3>
+		interrupts = <3 2>;
    	};
 };
