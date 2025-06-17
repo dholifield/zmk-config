@@ -27,22 +27,22 @@
    
 	left: pca95xx@21 {
 		compatible = "nxp,pca95xx";
-		status = "okay";
 		reg = <0x21>;
+		status = "okay";
 		gpio-controller;
+		has-pud;
 		#gpio-cells = <2>;
 		ngpios = <40>;
-		interrupt-parent = <&xiao_d>;
-		interrupts = <3 IRQ_TYPE_EDGE_TO_ACTIVE>;
+		interrupt-gpios = <&xiao_d 3>;
    	};
    	right: pca95xx@20 {
 		compatible = "nxp,pca95xx";
-		status = "okay";
 		reg = <0x20>;
+		status = "okay";
 		gpio-controller;
+		has-pud;
 		#gpio-cells = <2>;
 		ngpios = <40>;
-		interrupt-parent = <&xiao_d>;
-		interrupts = <3 IRQ_TYPE_EDGE_TO_ACTIVE>;
+		interrupt-gpios = <&xiao_d 3>;
    	};
 };
