@@ -7,13 +7,12 @@
 
     kscan0: kscan {
         compatible = "zmk,kscan-gpio-direct";
-	// wakeup-source;
-	poll-period-ms   = <20>;
-	debounce-press-ms = <10>;
-	debounce-release-ms = <10>;
+        wakeup-source;
+        debounce-press-ms = <10>;
+        debounce-release-ms = <10>;
 
         input-gpios
-            /* = <&left  3  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            = <&left  3  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
             , <&left  39 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
             , <&left  36 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
             , <&left  35 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
@@ -50,14 +49,14 @@
             , <&right 33 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
             , <&right 38 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
             , <&right 0  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-            , <&right 1  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>*/
+            , <&right 1  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
 
-            = <&left  5  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&left  5  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
             , <&left  6  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
             , <&left  7  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-            /*, <&right 7  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            , <&right 7  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
             , <&right 6  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-            , <&right 5  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>*/
+            , <&right 5  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
             ;
     };
 };
@@ -65,31 +64,32 @@
 // very helpful: https://docs.zephyrproject.org/latest/build/dts/api/bindings/gpio/nxp%2Cpca95xx.html
 
 &xiao_i2c {
-  	status = "okay";
-   	clock-frequency = <I2C_BITRATE_FAST>;
+    status = "okay";
+    clock-frequency = <I2C_BITRATE_FAST>;
    
-	left: pca95xx@21 {
-		compatible = "nxp,pca95xx";
-		reg = <0x21>;
-		status = "okay";
-		gpio-controller;
-		has-pud;
-		// has-interrupt-mask-reg;
-		#gpio-cells = <2>;
-		ngpios = <40>;
-		gpio-reserved-ranges = <8 19>;
-		// interrupt-gpios = <&xiao_d 3 2>;
-   	};
-   	/*right: pca95xx@20 {
-		compatible = "nxp,pca95xx";
-		reg = <0x20>;
-		status = "okay";
-		gpio-controller;
-		has-pud;
-		has-interrupt-mask-reg;
-		#gpio-cells = <2>;
-		ngpios = <40>;
-		gpio-reserved-ranges = <8 19>;
-		interrupt-gpios = <&xiao_d 3 2>;
-   	};*/
+    left: pca95xx@21 {
+	compatible = "nxp,pca95xx";
+	reg = <0x21>;
+	status = "okay";
+	gpio-controller;
+	has-pud;
+	has-interrupt-mask-reg;
+	#gpio-cells = <2>;
+	ngpios = <40>;
+	gpio-reserved-ranges = <8 19>;
+	interrupt-gpios = <&xiao_d 3 2>;
+    };
+
+    right: pca95xx@20 {
+	compatible = "nxp,pca95xx";
+	reg = <0x20>;
+	status = "okay";
+	gpio-controller;
+	has-pud;
+	has-interrupt-mask-reg;
+	#gpio-cells = <2>;
+	ngpios = <40>;
+	gpio-reserved-ranges = <8 19>;
+	interrupt-gpios = <&xiao_d 3 2>;
+    };
 };
