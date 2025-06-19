@@ -76,7 +76,7 @@
 		#gpio-cells = <2>;
 		ngpios = <40>;
 		gpio-reserved-ranges = <8 19>;
-		interrupt-gpios = <&xiao_d 3 2>;
+		interrupt-gpios = <&xiao_d 3 GPIO_ACTIVE_LOW>;
    	};
    	right: pca95xx@20 {
 		compatible = "nxp,pca95xx";
@@ -88,6 +88,6 @@
 		#gpio-cells = <2>;
 		ngpios = <40>;
 		gpio-reserved-ranges = <8 19>;
-		interrupt-gpios = <&xiao_d 3 2>;
+		interrupt-gpios = <&xiao_d 3 GPIO_ACTIVE_LOW>;
    	};
 };
