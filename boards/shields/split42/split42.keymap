@@ -2,8 +2,8 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 
-#define L_SPC &lt 1 SPACE
-#define R_RET &lt 2 RET
+#define SPC_L1 &lt 1 SPACE
+#define BSPC_L2 &lt 2 BSPC
 
 / {
     keymap {
@@ -11,10 +11,10 @@
 
         default_layer {
             bindings = <
-&kp ESC   &kp Q     &kp W     &kp E     &kp R     &kp T            &kp Y     &kp U     &kp I     &kp O    &kp P     &kp MINUS
-&kp TAB   &kp A     &kp S     &kp D     &kp F     &kp G            &kp H     &kp J     &kp K     &kp L    &kp SEMI  &kp RSHFT
-&kp LALT  &kp Z     &kp X     &kp C     &kp V     &kp B            &kp N     &kp M     &kp COMMA &kp DOT  &kp FSLH  &kp RCTRL
-                              &kp LCTRL &kp LGUI  L_SPC            R_RET     &kp BSPC  &kp DEL
+&kp TAB   &kp Q     &kp W     &kp E     &kp R     &kp T            &kp Y     &kp U     &kp I     &kp O    &kp P     &kp SQT
+&kp ESC   &kp A     &kp S     &kp D     &kp F     &kp G            &kp H     &kp J     &kp K     &kp L    &kp SEMI  &kp BSLH
+&kp LALT  &kp Z     &kp X     &kp C     &kp V     &kp B            &kp N     &kp M     &kp COMMA &kp DOT  &kp FSLH  &kp RET
+                              &kp LSHFT &kp LCTRL &kp LGUI         SPC_L1    BSPC_L2   &kp DEL
             >;
         };
             
