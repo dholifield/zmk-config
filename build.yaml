@@ -21,3 +21,4 @@
 include:
   - board: seeeduino_xiao_rp2040
     shield: split42
+    snippet: zmk-usb-logging
