@@ -68,28 +68,27 @@
     clock-frequency = <I2C_BITRATE_FAST>;
    
     left: pca95xx@21 {
-	compatible = "nxp,pca95xx";
-	reg = <0x21>;
-	status = "okay";
-	gpio-controller;
-	has-pud;
-	has-interrupt-mask-reg;
-	#gpio-cells = <2>;
-	ngpios = <40>;
-	gpio-reserved-ranges = <8 19>;
-	interrupt-gpios = <&xiao_d 3 2>;
-    };
-
-    right: pca95xx@20 {
-	compatible = "nxp,pca95xx";
-	reg = <0x20>;
-	status = "okay";
-	gpio-controller;
-	has-pud;
-	has-interrupt-mask-reg;
-	#gpio-cells = <2>;
-	ngpios = <40>;
-	gpio-reserved-ranges = <8 19>;
-	interrupt-gpios = <&xiao_d 3 2>;
+        compatible = "nxp,pca95xx";
+        reg = <0x21>;
+        status = "okay";
+        gpio-controller;
+        has-pud;
+        has-interrupt-mask-reg;
+        #gpio-cells = <2>;
+        ngpios = <40>;
+        gpio-reserved-ranges = <8 19>;
+        interrupt-gpios = <&xiao_d 3 GPIO_ACTIVE_LOW>;
+        };
+        right: pca95xx@20 {
+        compatible = "nxp,pca95xx";
+        reg = <0x20>;
+        status = "okay";
+        gpio-controller;
+        has-pud;
+        has-interrupt-mask-reg;
+        #gpio-cells = <2>;
+        ngpios = <40>;
+        gpio-reserved-ranges = <8 19>;
+        interrupt-gpios = <&xiao_d 3 GPIO_ACTIVE_LOW>;
     };
 };
